@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/springboot")
 public class UserController {
     //这里使用@RequestMapping注解表示该方法对应的二级上下文路径
-    @RequestMapping(value = "/getUserByGet", method = RequestMethod.GET)
+    @GetMapping(value = "/getUserByGet")
     String getUserByGet(@RequestParam(value = "userName") String userName){
         return "Hello " + userName;
     }
 
     //通过RequestMethod.POST表示请求需要时POST方式
-    @RequestMapping(value = "/getUserByPost", method = RequestMethod.POST)
+    @PostMapping(value = "/getUserByPost")
     String getUserByPost(@RequestParam(value = "userName") String userName){
         return "Hello " + userName;
     }
